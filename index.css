@@ -18,7 +18,7 @@ li{
 }
 li:hover{
     opacity: .8;
-    
+    cursor:grab;
     transition: .3s;
 
 }
@@ -124,3 +124,4 @@ font-size: 5px;
     text-decoration: line-through;
     color:rgb(100, 98, 98)
 }
+
