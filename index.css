@@ -1,0 +1,126 @@
+li{
+   
+    width: 100%;
+    height: 3rem;
+    padding: 0rem;
+    border-radius: 12px;
+    border-style: solid;
+    border-color: rgb(54, 51, 51);
+   
+    background-color: rgb(204, 202, 202);
+    
+    display: flex;
+    flex-direction: inline-block;
+    justify-content: space-between;
+    vertical-align: middle;
+    margin-bottom: 1rem;
+    
+}
+li:hover{
+    opacity: .8;
+    
+    transition: .3s;
+
+}
+li:hover #deleteButton{
+    visibility: visible;
+}
+body{
+    background-color: rgb(72 64 64);
+}
+#input-container{
+    text-align: center;
+    position: relative;
+   
+}
+#task-container{
+    
+    width:100%;
+    height: auto;
+    margin-top: 2vw;
+    
+    
+}
+#task-list{
+    width:100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    list-style-type: disc;
+    text-align: center;
+}
+#main{
+    width: 65%;
+    height: auto;
+    background-color: rgb(185, 181, 181,0.8);
+    box-shadow: honeydew;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+    margin-left: 10vw;
+    border-radius: 12px;
+    
+    
+}
+#task{
+    padding-left: 4rem;
+    height: 4rem;
+    font-family: cursive;
+    font-size: medium;
+    border-radius: 7px;
+    background-color: rgb(233, 232, 227);
+    width: 100%;
+    z-index: 1;
+}
+.addIcon{
+  position:absolute;
+  left:1%;
+  z-index: 2;
+  top:15%;
+  font-size: 2rem;
+  color: rgb(93, 230, 40);
+}
+#addButton{
+    background-color: rgb(233, 232, 227);
+    position: absolute;
+    right:1%;
+    top:15%;
+   border-style: none;
+   cursor: pointer;
+   
+    
+}
+.deleteIcon{
+ border-radius: 50%;
+font-size: 5px;
+ color: rgb(248, 16, 16);
+ vertical-align: middle;
+ 
+}
+#deleteButton{
+    background-color: rgb(204, 202, 202,.8);;
+    border-style: none;
+    margin:0.5rem;
+    margin-right: 2rem;
+    visibility: hidden;
+    cursor: pointer;
+    
+    
+}
+#newTaskName{
+    font-family: cursive;
+    font-style: bold;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+}
+#taskLeft{
+    font-family:monospace;
+    text-align: center;
+    font-size: 1rem;
+    margin:2rem;
+    
+}
+.line-through{
+    text-decoration: line-through;
+
+}

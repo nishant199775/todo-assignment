@@ -1,0 +1,59 @@
+var taskInput=document.getElementById("task")
+var addButton=document.getElementById("addButton")
+var taskContainer=document.getElementById("task-list")
+var deleteButton=document.getElementById('deleteButton')
+var taskCount=document.getElementById('taskCount')
+addButton.onclick=function(){
+    addItem();
+}
+function addItem(){
+    if(taskInput.value.length>0)
+    {
+        
+    var newItem=document.createElement('li')
+    var newtask=document.createElement('span')
+    var deleteButton=document.createElement('button')
+
+    newtask.innerHTML=taskInput.value
+    newtask.setAttribute('id','newTaskName')
+
+    var deleteIcon=document.createElement('i')
+    deleteIcon.setAttribute('class','fa fa-calendar-minus-o fa-2x deleteIcon')
+    deleteButton.appendChild(deleteIcon)
+    deleteButton.setAttribute("onClick","deleteItem(this)")
+    deleteButton.setAttribute("id","deleteButton")
+    
+    
+    newItem.appendChild(newtask);
+    newItem.appendChild(deleteButton);
+    
+    taskContainer.prepend(newItem)
+
+    taskCount.innerHTML=taskContainer.childElementCount;
+    taskInput.value=""
+    }
+    
+}
+function deleteItem(e){
+    var parent=e.parentNode.parentNode
+    var child=e.parentNode
+    
+    parent.removeChild(child)
+
+    taskCount.innerHTML=taskContainer.childElementCount;
+}
+taskInput.addEventListener('keypress',updateItem)
+function updateItem(e)
+{
+    
+    if(e.which==13)
+    {
+        addItem()
+    }
+}
+
+
+function toggleClass(e){
+    console.log(e.parentNode)
+  e.children[1].classList.toggle('line-through');
+}
