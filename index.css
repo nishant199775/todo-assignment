@@ -122,5 +122,5 @@ font-size: 5px;
 }
 .line-through{
     text-decoration: line-through;
-
+    color:rgb(100, 98, 98)
 }

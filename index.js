@@ -13,6 +13,7 @@ function addItem(){
     var newItem=document.createElement('li')
     var newtask=document.createElement('span')
     var deleteButton=document.createElement('button')
+    
 
     newtask.innerHTML=taskInput.value
     newtask.setAttribute('id','newTaskName')
@@ -28,6 +29,10 @@ function addItem(){
     newItem.appendChild(deleteButton);
     
     taskContainer.prepend(newItem)
+
+    newItem.addEventListener('click',function(){
+        newtask.classList.toggle('line-through')
+    })
 
     taskCount.innerHTML=taskContainer.childElementCount;
     taskInput.value=""
@@ -53,7 +58,3 @@ function updateItem(e)
 }
 
 
-function toggleClass(e){
-    console.log(e.parentNode)
-  e.children[1].classList.toggle('line-through');
-}
