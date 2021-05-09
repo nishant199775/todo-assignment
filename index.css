@@ -41,6 +41,18 @@ body{
     
     
 }
+#extra-buttons{
+    margin:1vw;
+   
+}
+#extra-buttons button{
+  background-color:rgb(185, 181, 181,0.8) ;
+  font-family: cursive;
+  border-radius: 12px;
+  cursor: pointer;
+  width:5rem;
+  height: 3rem;
+}
 #task-list{
     width:100%;
     height: auto;

@@ -47,6 +47,7 @@ function deleteItem(e){
 
     taskCount.innerHTML=taskContainer.childElementCount;
 }
+
 taskInput.addEventListener('keypress',updateItem)
 function updateItem(e)
 {
@@ -57,4 +58,29 @@ function updateItem(e)
     }
 }
 
+
+var sort=document.getElementById('sortButton');
+var delChecked=document.getElementById('deleteChecked')
+sort.onclick=function(){
+    var checkedItem=document.querySelectorAll('.line-through');
+    for(var i=0;i<checkedItem.length;i++)
+    {
+        var child=checkedItem[i].parentNode
+        var parent=child.parentNode
+        parent.prepend(child);
+        
+    }
+}
+delChecked.onclick=function(){
+    var checkedItem=document.querySelectorAll('.line-through');
+   
+    for(var i=0;i<checkedItem.length;i++)
+    {
+        let child=checkedItem[i].parentNode
+        let parent=child.parentNode
+        parent.removeChild(child);
+        
+    }
+    taskCount.innerHTML=taskContainer.childElementCount;
+}
 
