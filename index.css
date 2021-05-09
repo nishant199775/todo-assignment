@@ -9,9 +9,10 @@ li{
    
     background-color: rgb(204, 202, 202);
     
+    
     display: flex;
     flex-direction: inline-block;
-    justify-content: space-between;
+    justify-content:space-between;
     vertical-align: middle;
     margin-bottom: 1rem;
     
@@ -50,15 +51,19 @@ body{
   font-family: cursive;
   border-radius: 12px;
   cursor: pointer;
-  width:5rem;
+  width:8rem;
   height: 3rem;
+}
+#extra-buttons button:hover{
+ opacity: .8;
+ box-shadow: 2px 2px 2px grey;
 }
 #task-list{
     width:100%;
     height: auto;
     margin: 0;
     padding: 0;
-    list-style-type: disc;
+    
     text-align: center;
 }
 #main{

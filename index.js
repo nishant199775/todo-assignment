@@ -67,7 +67,7 @@ sort.onclick=function(){
     {
         var child=checkedItem[i].parentNode
         var parent=child.parentNode
-        parent.prepend(child);
+        parent.appendChild(child);
         
     }
 }
